@@ -2,10 +2,9 @@
 
 * [🍏 Introduction and basics](README.md)
 * [Basic operators](basic-operators.md)
-* [Array, Dictionary, Tuple](array-dictionary-tuple.md)
+* [🔄 Collection Types](collection-types.md)
 * [Strings and Characters](strings-and-characters.md)
 * [Conditions](conditions.md)
-* [Collection Types](collection-types.md)
 * [Control Flow](control-flow.md)
 * [Functions](functions.md)
 * [Closures](closures.md)
