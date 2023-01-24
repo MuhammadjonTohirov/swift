@@ -101,26 +101,3 @@ Boshqacha qilib aytganda `true` or `false`.
 String bu so'z demakdir, yoki belgilar ketma ketligi.
 
 > `let name = "Bob"` -> name yaratilidi va "Bob" degan string ni qiymat sifatida qabul qildi
-
-{% hint style="info" %}
-String ichida keyword ishlatmoqchi bo'lsangiz `\()` belgidan foydalaning
-{% endhint %}
-
-> Bir necha qator ga string yozish uchun (`"""`) 3 ta qo'shtirnoqdan foydalaning
-
-```
-// Ex:
-// Ekranga malumotni chop etish uchun print funksiyasidan foydalaning
-
-let name = "User"
-print("My name is \(name)) // My name is User
-
-print(
-"""
-My name is \(name).
-Do you know that?
-"""
-)
-// My name is User
-// Do you know that?
-```
