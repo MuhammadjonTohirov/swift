@@ -130,6 +130,79 @@ print(meals)
 
 <summary>Dictionary</summary>
 
+Swift-dagi `Dictionary` kalit-qiymat juftliklari to'plami bo'lib, har bir kalit yagona xisbolanadi. U arrayga o'xshaydi, lekin elementlarga kirish indeks emas, balki kalit yordamida amalga oshiriladi. `Dictionary`dagi kalit-qiymat juftliklari tartibsizdir, ya'ni ularning lug'atga qo'shilish tartibi ular olinadigan tartibda bo'lishi kafolatlanmaydi.
+
+Swift-da `Dictionary` kvadrat qavslar `[ ]` yordamida aniqlanadi va ularning kalit va qiymat turlari ko'rsatilishi kerak. Mana, meva nomlarini ularning narxiga ko'rsatadigan lug'at yaratish misoli:
+
+```swift
+// Masalan
+// Ushbu misolda kalit turi String va qiymat turi Double.
+var fruitPrices: [String: Double] = [
+        "Apple": 0.5, 
+        "Banana": 0.25, 
+        "Orange": 0.75
+]
+```
+
+Bo'sh `Dictionary` yaratish va keyinroq kalit-qiymat juftlarini qo'shish uchun qisqacha sintaksisidan ham foydalanishingiz mumkin.
+
+```
+// Masalan
+var fruitPrices: [String: Double] = [:]
+fruitPrices["Apple"] = 0.5
+fruitPrices["Banana"] = 0.25
+fruitPrices["Orange"] = 0.75
+
+```
+
+```
+// Kvadrat qavs ichidagi kalitdan foydalanib, 
+// kalit qiymatini olishingiz mumkin, 
+// masalan:
+let applePrice = fruitPrices["Apple"]
+```
+
+`Dictionary` dagi kalit orqali uni qiymatini o'zgartirsh mumkin
+
+```
+// Masalan
+
+fruitPrices["Apple"] = 11
+print(fruitPrices)
+
+// endi natija
+// ["Apple": 11.0, "Orange": 0.75, "Banana": 0.25]
+
+
+// boshqacha uslubi ham bor u esa `updateValue` dan foydalanish
+
+fruitPrices.updateValue(4, forKey: "Apple")
+print(fruitPrices)
+
+// endi natija
+// ["Apple": 4.0, "Orange": 0.75, "Banana": 0.25]
+
+```
+
+`Dictionary` dagi kalit ga qiymatni `nil` berish orqali uni o'chirish mumkin yoki `removeValue` metodidan foydalanish kerak
+
+```
+// Masalan
+
+// = nil
+fruitPrices["Apple"] = nil
+print(fruitPrices)
+
+// ["Orange": 0.75, "Banana": 0.25]
+
+
+// removeValue
+fruitPrices.removeValue(forKey: "Banana")
+print(fruitPrices)
+
+// ["Orange": 0.75]
+```
+
 
 
 </details>
