@@ -211,6 +211,57 @@ print(fruitPrices)
 
 <summary>Tuple</summary>
 
+Swift-dagi `Tuple` turli xil bo'ligan tartiblangan qiymatlar to'plamidir. Ular `array`ga o'xshaydi, lekin `tuple`dagi elementlarga indeks yordamida kirish mumkin emas, ular o'z pozitsiyalari yordamida kirishadi. `Tuple` - bu bir nechta qiymatlarni bitta qo'shma qiymatga guruhlash usuli.
+
+Swift-da `tuple` qavslar `( )` yordamida aniqlanadi va elementlarning turlarini ko'rsatish shart emas. \
+Ism va yoshni o'z ichiga olgan `tuple` yaratish misoli:
+
+```
+let person = ("John", 30)
+print(person)
+
+// ("John", 30)
+
+print(person.0)
+```
+
+Shuningdek, `tuple`da alohida konstantalar yoki o'zgaruvchilarga ajratishingiz mumkin,&#x20;
+
+```
+// Masalan
+let (name, age) = person
+
+print(name, age)
+
+// John 30
+```
+
+Shuningdek, `tuple` elementlariga ularning joylashuvi bo'yicha malumotni olishingiz mumkin
+
+```
+// Masalan
+let name = person.0
+let age = person.1
+
+print(name, age)
+
+// Jogn 30
+```
+
+Shuningdek, `tuple`da har bir elementdan oldin yorliqni qo'shish orqali `tuple` elementlarini nomlashingiz mumkin. Bu unga yanada o'qilishi va foydalanishni osonlashtiradi.
+
+```
+// Masalan
+
+let person = (name: "John", age: 30)
+
+print(person.name)
+print(person.age)
+
+// John
+// 30
+```
+
 
 
 </details>
