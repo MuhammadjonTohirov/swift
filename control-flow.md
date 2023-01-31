@@ -44,5 +44,58 @@ for index in 1...5 {
 // 5 times 5 is 25
 ```
 
+Ba'zilar interfeysida kamroq belgi qo'yishni xohlashlari mumkin. Buning o'rniga ular har 5 qadamda bitta belgini afzal ko'rishlari mumkin. Keraksiz belgilarni o'tkazib yuborish uchun `stride(from:to:by:)` funksiyasidan foydalaning.
+
+```
+// Masalan: 0 dan 20 gacha har qadami 5 taga teng bo'lgan loop ni yaratamiz
+
+for i in stride(from: 0, to: 21, by: 5) {
+    print(i)
+}
+
+//0
+//5
+//10
+//15
+//20
+```
+
 ### While Loop
 
+`while` sikli kod blokini bajarishdan oldin shartni tekshiradi. Shart to'g'ri bo'lsa, tsikl bajarilishda davom etadi. Swift-dagi `while` tsiklining sintaksisi:
+
+```
+while condition {
+    // code
+}
+```
+
+```
+// Masalan
+
+var count = 0
+
+while count < 5 {
+    print("count is \(count)")
+    count += 1
+}
+```
+
+`releat-while` `while` tsikliga o'xshaydi, lekin shartni tekshirishda bir oz farq bor. `repeat-while` sikli ichidagi kod bloki kamida bir marta bajarilishi kafolatlanadi va shart to'g'ri bo'lsa, tsikl bajarilishda davom etadi. Swift-da takrorlash-while siklining sintaksisi:
+
+```
+repeat {
+    // code
+} while condition
+```
+
+```
+// Masalan
+
+var count = 0
+
+repeat {
+    print("count is \(count)")
+    count += 1
+} while count < 5
+```
