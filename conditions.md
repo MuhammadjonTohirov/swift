@@ -85,7 +85,7 @@ default:
 
 `Switch` ning yana bir qulayliklardan dasturchi bir necha mantiqiy xolatni tekshira olishida&#x20;
 
-```
+```swift
 // Example
 
 let grade = 100
