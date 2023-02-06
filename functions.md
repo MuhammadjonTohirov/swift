@@ -82,3 +82,86 @@ printNumbers(n: 3)
 // 2
 // 1
 ```
+
+#### Recursive funksiyalarga misollar
+
+
+
+<details>
+
+<summary>1 dan boshlab n gacha sonlar yig'indisi</summary>
+
+```swift
+// Masalan
+
+func sum(upto n: Int) -> Int {
+    if n <= 0 {
+        return 0
+    }
+    
+    return n + sum(upto: n - 1)
+}
+
+// birdan boshlab 5 gacha sonni yig'indisi
+print(sum(upto: 5))
+
+// natija: 15
+
+
+// n = 5 -> 5 + {5 - 1 + {4 - 1 + {3 - 1 + {2 - 1 + {1 - 1}}}}}
+```
+
+</details>
+
+<details>
+
+<summary>n! ni xisoblash</summary>
+
+1 dan n gacha sonlar ko'paytmasini topish
+
+```swift
+// Masalan
+
+func factorial(of n: Int) -> Int {
+    if n == 1 {
+        return 1
+    }
+    
+    return n * factorial(of: n - 1)
+}
+
+print(factorial(4))
+// 24
+
+// 4 * {(4 - 1) * {(3 - 1) * {(2 - 1)}}}
+// 4 * 3 * 2 * 1 ni xisoblaydi va natija 24 bo'ldi
+
+```
+
+</details>
+
+<details>
+
+<summary>fibonacci n</summary>
+
+n - o'rinda joylashga fibonachi sonini topish
+
+```swift
+// Masalan
+
+func fibonacci(of n: Int) -> Int {
+    if n <= 1 {
+        return n
+    }
+    
+    let left = fibonacci(of: n - 1)
+    let right = fibonacci(of: n - 2)
+    
+    return left + right
+}
+```
+
+</details>
+
+
+
