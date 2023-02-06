@@ -1,4 +1,4 @@
-# Functions
+# ♻ Functions
 
 Swift-dagi funksiya ma'lum bir vazifani bajaradigan mustaqil kod blokidir. Funktsiyalar qayta ishlatilishi mumkin va ularni kodingizning boshqa qismlaridan turib ishlatish ham mumkin, bu esa kodingizni tartibga solish va saqlashni osonlashtiradi.
 
@@ -135,8 +135,11 @@ print(factorial(4))
 
 // 4 * {(4 - 1) * {(3 - 1) * {(2 - 1)}}}
 // 4 * 3 * 2 * 1 ni xisoblaydi va natija 24 bo'ldi
-
 ```
+
+![](<.gitbook/assets/image (1).png>)
+
+Bu yerda recursive uslubda n factorial ni xisoblashni grafik uslubda ko'rish mumkin.
 
 </details>
 
