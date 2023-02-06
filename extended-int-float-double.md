@@ -73,3 +73,38 @@ let isMultiple = x.isMultiple(of: y) // natija true, ya'ni 10, 5 ga bo'linadi
 </details>
 
 #### Float va double
+
+<details>
+
+<summary><code>round()</code></summary>
+
+Float you double sonini eng yaqin integerga yahlitlaydi
+
+```
+// Masalan
+let i = 2.4
+print(i.round())
+// natija 2
+
+let j = 2.7
+print(j.round())
+// natija 3
+```
+
+</details>
+
+<details>
+
+<summary><code>abs()</code></summary>
+
+Biror sonni absolut qiymatini topish uchun foydalaniladi
+
+```
+// Masalan
+let t = -4.1
+print(abs(t))
+// natija 4.1
+
+```
+
+</details>
