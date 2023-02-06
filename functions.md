@@ -161,6 +161,19 @@ func fibonacci(of n: Int) -> Int {
 }
 ```
 
+```
+// Agar yuqoridagi funksiyaga 5 ni bersak. nima sodir 
+// bo'lishi quidagi rasmda ekltirilgan
+
+print(fibonacci(of: 5))
+// 5 - o'rindagi fibonacci soni 
+// natija: 5
+// 0, 1, 1, 2, 3, 5
+
+```
+
+![](.gitbook/assets/image.png)
+
 </details>
 
 
