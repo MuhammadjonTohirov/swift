@@ -8,6 +8,7 @@
 * [Conditions](conditions.md)
 * [Control Flow](control-flow.md)
 * [♻ Functions](functions.md)
+* [Search, Sort](search-sort.md)
 * [Closures](closures.md)
 * [Methods](methods.md)
 * [Subscripts](subscripts.md)
