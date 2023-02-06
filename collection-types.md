@@ -122,7 +122,7 @@ print("Bizning \(day) dagi ish soatimiz \(whour)")
 
 Budan ham array kabi berilgan o'ridagi qiymatni o'zgartirish mumkin
 
-```
+```swift
 // Masalan
 
 workingHours[0][1] = "Dushamba" // "Monday" -> "Dushamba" ga o'zgardi
