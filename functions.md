@@ -175,7 +175,7 @@ print(fibonacci(of: 5))
 
 ```
 
-![](.gitbook/assets/image.png)
+
 
 </details>
 
