@@ -77,6 +77,8 @@ print(array.sorted(by: >))
 
 Boshqacha uslublari ham bor ulardan biri&#x20;
 
+#### Selection sort
+
 ```
 // Boshqacha uslubda sort qilish, masalan selection sort
 
