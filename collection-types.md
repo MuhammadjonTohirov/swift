@@ -103,6 +103,23 @@ Agar biz `(3, 2)` o'rindagi ma'lumotni olmoqchi bo'lsak (yani 8 ni). U xolda biz
 print(matrix[2][1]) // 8
 ```
 
+Quida 2 o'lchamlik array ga misol
+
+```swift
+let workingHours = [  ["Week Day", "Monday", "Tuesday"],
+  ["Hours", "9 AM - 5 PM", "9 AM - 5 PM"],
+]
+
+// hafta kunlari va u kunlardagi ish soatlari
+
+let day = workingHours[0][1]
+let whour = workingHours[1][1]
+
+print("Bizning \(day) dagi ish soatimiz \(whour)")
+
+// Biznig Monday dagi ish soatimiz 9 AM - 5 PM
+```
+
 </details>
 
 <details>
