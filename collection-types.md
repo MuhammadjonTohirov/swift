@@ -10,7 +10,7 @@ description: Array, Set, Dictionary, Tuple
 
 Array bir xil turdagi qiymatlarni tartiblangan ro'yxatda saqlaydi. Xuddi shu qiymat arrayda turli pozitsiyalarda bir necha marta paydo bo'lishi mumkin.
 
-```
+```swift
 // Empty (bo'sh) arrayni yaratish
 
 var someInts: [Int] = []
@@ -18,23 +18,33 @@ print("Integerlar soni \(someInts.count) ta")
 
 ```
 
+```swift
+// N ta bir xil qiymatiga ega bo'lgan array yaratish
+
+var array: [Int] = Array.init(repeating: 0, count: 4)
+
+print(array)
+
+// [0, 0, 0, 0]
 ```
+
+```swift
 // Arrayga ma`lumot qo'shish
 someInts.append(3)
 ```
 
-```
+```swift
 // Arraydagi malumotlarni yo'q qilish
 someInts = []
 ```
 
-```
+```swift
 // Array ni boshlang'ich qiymat bilan yaratish
 var shoppingList: [String] = ["Eggs", "Milk"]
 
 ```
 
-```
+```swift
 // Arrayga boshqacha uslubda ma'lmuot qo'shish
 
 shoppingList += ["Baking Powder"]
@@ -66,6 +76,32 @@ print(shoppingList)
 ```
 
 
+
+</details>
+
+<details>
+
+<summary>Multi dimentional array</summary>
+
+Multi dimentional array - 2 va undan ortiq o'chamga ega bo'lgan array. Masalan 2 o'lchamlik array, bizga bu array matrix yoki matritsa nomi bilan ma'lum.
+
+```swift
+// Masalan
+let matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+// yuridagi 2 o'lchamli array matematikada quidagicha yoziladi
+// 1 2 3
+// 4 5 6
+// 7 8 9
+```
+
+Agar biz `(3, 2)` o'rindagi ma'lumotni olmoqchi bo'lsak (yani 8 ni). U xolda biz `matrix[2][1]` deb yozishimiz kerak bo'ladi
+
+```swift
+// Masalan
+
+print(matrix[2][1]) // 8
+```
 
 </details>
 

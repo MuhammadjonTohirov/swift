@@ -7,7 +7,7 @@
 * [Extended Int, Float, Double](extended-int-float-double.md)
 * [Conditions](conditions.md)
 * [Control Flow](control-flow.md)
-* [Functions](functions.md)
+* [♻ Functions](functions.md)
 * [Closures](closures.md)
 * [Methods](methods.md)
 * [Subscripts](subscripts.md)
