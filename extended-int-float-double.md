@@ -80,7 +80,7 @@ let isMultiple = x.isMultiple(of: y) // natija true, ya'ni 10, 5 ga bo'linadi
 
 Float you double sonini eng yaqin integerga yahlitlaydi
 
-```swift
+```
 // Masalan
 let i = 2.4
 print(i.round())
@@ -99,7 +99,7 @@ print(j.round())
 
 Biror sonni absolut qiymatini topish uchun foydalaniladi
 
-```swift
+```
 // Masalan
 let t = -4.1
 print(abs(t))
