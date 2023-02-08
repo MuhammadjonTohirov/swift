@@ -144,3 +144,20 @@ Float.random(in: 0..<40) // 0 dan 39 gacha bo'lgan oraliqda float yarat
 ```
 
 </details>
+
+<details>
+
+<summary><code>squareRoot()</code></summary>
+
+`Double` yoki `Float`ni ildiz ostiga olib natijani qaytaradi
+
+```
+// Masalan
+
+let a = 4.0 // a bu yerda Double bo'lib qoladi
+print(a.squareRoot())
+
+// natija: 2
+```
+
+</details>
