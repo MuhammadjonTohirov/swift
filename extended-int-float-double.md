@@ -72,6 +72,24 @@ let isMultiple = x.isMultiple(of: y) // natija true, ya'ni 10, 5 ga bo'linadi
 
 </details>
 
+<details>
+
+<summary><code>Int.random(in:)</code></summary>
+
+Berilgan oraliqda qandaydur integer yaratadi.
+
+```swift
+// Masalan
+
+Int.random(in: 0..<40) // 0 dan 39 gacha bo'lgan oraliqda int yarat
+
+// natjia: har safar har xil bo'ladi
+ 
+
+```
+
+</details>
+
 #### Float va double
 
 <details>
@@ -105,6 +123,24 @@ let t = -4.1
 print(abs(t))
 // natija 4.1
 
+```
+
+</details>
+
+<details>
+
+<summary><code>Float.random(in:)</code></summary>
+
+Berilgan oraliqda qandaydur float yaratadi.
+
+`random(in:)` buyrug'ini `double` uchun ham qo'llash mumkin
+
+```swift
+// Masalan
+
+Float.random(in: 0..<40) // 0 dan 39 gacha bo'lgan oraliqda float yarat
+
+// natjia: har safar har xil bo'ladi
 ```
 
 </details>
