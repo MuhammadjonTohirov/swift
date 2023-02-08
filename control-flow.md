@@ -60,6 +60,23 @@ for i in stride(from: 0, to: 21, by: 5) {
 //20
 ```
 
+`For-In` loop ni yana bir ajoyib xususiyatlaridan biri, loop ni muayyan bir shart asosida bajarishimiz mumkin
+
+```swift
+// Masalan
+let number: [Int] = [1, 2, 3, 4, 5, 6, 7]
+// aytaylik biz toq sonlarni ekranga chiqarishimiz kerak
+
+for num in numbers where num % 2 != 0 {
+    print(num)
+} 
+
+// 1
+// 3
+// 5
+// 7
+```
+
 ### While Loop
 
 `while` sikli kod blokini bajarishdan oldin shartni tekshiradi. Shart to'g'ri bo'lsa, tsikl bajarilishda davom etadi. Swift-dagi `while` tsiklining sintaksisi:
