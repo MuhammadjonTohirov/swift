@@ -64,7 +64,7 @@ let isThereBooks = !hasBooks    // isThereBooks = false
 > * Less than or equal to (`a <= b`)
 
 {% code lineNumbers="true" %}
-```
+```swift
 // Example
 
 let a = 2
@@ -86,6 +86,26 @@ let c5 = a <= b // c2 true chunki '2' '3'dan kichik yoki teng
 {% hint style="info" %}
 Yuqoridagi lardan kelib chiqadiki solishtirish operatorlari o'zlaridan natija xosil qiladi, yani `true` yoki `false` ni.&#x20;
 {% endhint %}
+
+### &#x20;Casting numerals (Raqamlarni bir turdan ikkinchi turda o'girish)
+
+```swift
+// Masalan
+let a: Int = 4
+let b: Double = 8
+
+print(a + b) // bu xato xolat, compiler da xatolik bo'ladi
+
+print(Double(a) + b) // natija 12.0 double tipida
+
+print(a + Int(b)) // natija 12 int tipida
+```
+
+> Yuqoridagi vaziyatda biz `Int` tipiga mansub sonni `Double` ga va `Double` tipidagi sonni `Int` ga o'girdik.
+>
+> Sababi biz bunga majburmiz.
+>
+> Swift arifmetik amallarni bajarish uchun bir xil tipga mansub qiymatlarni talab etadi.
 
 ### Identity Operators (=== va !===)
 

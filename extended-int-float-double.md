@@ -108,3 +108,5 @@ print(abs(t))
 ```
 
 </details>
+
+#### Casting
