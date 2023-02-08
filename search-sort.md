@@ -4,7 +4,7 @@
 
 Search array yoki istalgan collection tipidagi to'plam ichidan biror bir ma'lumotni qidirish
 
-```
+```swift
 // Masalan quidagi joy nomlari ichidan Sam bilan boshlanadiganini 
 // toping desa.
 
@@ -33,7 +33,7 @@ bilan boshlandaigan malumotlar bo'ladi
 Etibor bergan bo'lsangiz. Biz yuqorida avval o'tmagan narsalardan ham foydalandik.\
 Lekin buni shu paytga qadar o'rganganlarimiz yordamida ham qilsak bo'ladi
 
-```
+```swift
 // Masalan
 
 let names: [String] = [
@@ -63,7 +63,7 @@ Bir xil natija 2 xil yondashuv.
 
 Sort bu tartiblash bo'lib array yoki boshqa bir to'plamlarni ma'lumotlarini tartiblash demakdir
 
-```
+```swift
 // Masalan
 let array = [4, 5, 2, 1, 0, 3]
 print(array.sorted())
@@ -79,7 +79,7 @@ Boshqacha uslublari ham bor ulardan biri&#x20;
 
 #### Selection sort
 
-```
+```swift
 // Boshqacha uslubda sort qilish, masalan selection sort
 
 func sort(array: [Int]) -> [Int] {
@@ -107,7 +107,7 @@ print(sort(array: [4, 5, 2, 1, 0, 3]))
 
 Bu yerda bo'layotgan xodisa quidagicha
 
-```
+```textile
 for loop ni har bir qadamini tekshirganda
 0chi va 1chi qadamlarda o'zgarishsiz, chunki boshida o'zgarishshart emas
 
@@ -121,7 +121,7 @@ for loop ni har bir qadamini tekshirganda
 
 Keling endi while loop ni ham ichini tekshirib koramiz
 
-```
+```textile
 Bu yerda biz ketmaketlikni to'liqroq ko'rishimiz mumkin.
 
 0 [4, 5, 2, 1, 0, 3]
