@@ -44,6 +44,48 @@ print(result)
 >
 > `return sum` - funksiya `sum` nomli o'zgaruvchini qaytaryapdi.
 
+### O'zgaruvchan (variadic) parametrlar
+
+Variadic parametr - belgilangan turdagi nol yoki undan ortiq qiymatlarni qabul qiladigan parametr. Funktsiya ta'rifi doirasida parametr turi nomiga uchta nuqta (...) qo'shish orqali variadik parametrni aniqlaymiz. Variadik parametrning qiymatlari funksiyaga belgilangan turdagi massiv sifatida taqdim etiladi.
+
+```swift
+// Masalan
+
+func sayHello(greeting: String, names: String...) {
+     for name in names {
+       print("\(greeting) \(name)")
+     }
+}
+
+sayHello(greeting: "Salom", names: "Ahmad")
+// Salom Ahmad
+
+sayHello(greeting: "Salom", names: "Ahmad", "Karim")
+// Salom Ahmad
+// Salom Karim
+```
+
+### Inout&#x20;
+
+Inout dasturchiga funksiaga parameter sifatida berilgan o'zgaruvchini funksia ichida o'zgartirganda berilgan parameterini qiymati ham o'zgarishi taminlash da yordam beradi.
+
+```swift
+// Masalan
+func add(number: Int, to anotherNumber: inout Int) {
+    anotherNumber += number
+}
+var a = 20
+let b = 12
+
+print(a) // 20
+
+add(number: b, to: &a)
+
+print(a) // 32
+```
+
+Yuqoridagi misolda o'zgaruvchi `a` ning qiymati funksia chaqirilishidan avval `20` undan keyin esa `32` ga teng bo'lib qolganini ko'rish mumkin.
+
 ## Recursive functions
 
 {% hint style="info" %}
