@@ -179,7 +179,7 @@ print(factorial(4))
 // 4 * 3 * 2 * 1 ni xisoblaydi va natija 24 bo'ldi
 ```
 
-![](<.gitbook/assets/image (1).png>)
+![](<.gitbook/assets/image (1) (1).png>)
 
 Bu yerda recursive uslubda n factorial ni xisoblashni grafik uslubda ko'rish mumkin.
 

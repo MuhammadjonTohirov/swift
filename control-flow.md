@@ -34,7 +34,7 @@ for (animalName, legCount) in numberOfLegs {
 Raqamlar diapazoni orqali ham `for-in` siklidan foydalanishingiz mumkin. Ushbu misol besh martalik jadvaldagi dastlabki bir nechta yozuvlarni chop etadi:
 
 ```swift
-for index in 1...5 {
+for index in 1...5 { // bu yerda [1, 5] oraliqdagi sonlar.
     print("\(index) times 5 is \(index * 5)")
 }
 // 1 times 5 is 5
@@ -42,6 +42,8 @@ for index in 1...5 {
 // 3 times 5 is 15
 // 4 times 5 is 20
 // 5 times 5 is 25
+
+// agar oraliqni [1, 5) gacha qilmoqchi bo'lsangiz 1..<5
 ```
 
 Ba'zilar interfeysida kamroq belgi qo'yishni xohlashlari mumkin. Buning o'rniga ular har 5 qadamda bitta belgini afzal ko'rishlari mumkin. Keraksiz belgilarni o'tkazib yuborish uchun `stride(from:to:by:)` funksiyasidan foydalaning.
@@ -58,6 +60,23 @@ for i in stride(from: 0, to: 21, by: 5) {
 //10
 //15
 //20
+```
+
+`For-In` loop ni yana bir ajoyib xususiyatlaridan biri, loop ni muayyan bir shart asosida bajarishimiz mumkin
+
+```swift
+// Masalan
+let number: [Int] = [1, 2, 3, 4, 5, 6, 7]
+// aytaylik biz toq sonlarni ekranga chiqarishimiz kerak
+
+for num in numbers where num % 2 != 0 {
+    print(num)
+} 
+
+// 1
+// 3
+// 5
+// 7
 ```
 
 ### While Loop
