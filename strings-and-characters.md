@@ -86,7 +86,7 @@ print(grade ?? 0) // bu yerda grade nil emas shuning uchun 0 emas 4 print qlinad
 
 <details>
 
-<summary>append()</summary>
+<summary><code>append()</code></summary>
 
 `Append` string oxiriga belgi yoki so'z qo'shishda foydalaniladi
 
@@ -105,7 +105,7 @@ print(greeting)
 
 <details>
 
-<summary>hasPrefix()</summary>
+<summary><code>hasPrefix()</code></summary>
 
 `hasPrefix` string ni berilgan belgi yoki so'z bilan boshlanish yoki aksini aniqlaydi
 
@@ -130,7 +130,7 @@ print("Is started with dun", isStartedWithDun)
 
 <details>
 
-<summary>hasSuffix()</summary>
+<summary><code>hasSuffix()</code></summary>
 
 `hasSuffix` string ni berilgan belgi yoki so'z bilan yanlanishini tekshiradi
 
@@ -155,7 +155,7 @@ print("Is ended with lom", isEndedWithLom)
 
 <details>
 
-<summary>insert()</summary>
+<summary><code>insert()</code></summary>
 
 `insert` stringni berilgan indexiga belgi kiritadi
 
@@ -179,7 +179,7 @@ print(greeting)
 
 <details>
 
-<summary>remove()</summary>
+<summary><code>remove()</code></summary>
 
 `remove` stringni berilgan indexidagi belgini o'chiradi
 
@@ -198,7 +198,7 @@ print(greeting)
 
 <details>
 
-<summary>replacingOccurrences()</summary>
+<summary><code>replacingOccurrences()</code></summary>
 
 `replacingOccurrences` stringni ichida berilgan so'z yoki belgini boshqa bir belgi yoki so'z bilan almashtiradi
 
@@ -217,7 +217,7 @@ print(result1)
 
 <details>
 
-<summary>split()</summary>
+<summary><code>split()</code></summary>
 
 `split` stringni berilgan belgi uchragan joydan stringni bo'ladi va array xosil qiladi
 
@@ -232,6 +232,36 @@ print(result)
 // ["salom", "dunyo", "qalaysan"]
 
 // bu xolatda `space` belgisidan foydalanib stringni bo'laklarga bo'ldik
+```
+
+</details>
+
+<details>
+
+<summary><code>init(repeating: , count: )</code></summary>
+
+Berilgan `string` yoki `character` ni bir necha marotaba yozish uchun foydalaniladi.
+
+```swift
+// 1. n soni va c character berilgan, bu characterni n marotaba chiqaring
+
+let n: Int = 4
+let c: Character = "a"
+
+let str = String.init(repeating: c, count: n)
+print(str) 
+// aaaa
+```
+
+```
+// 2. n soni va s string b berilgan, bu stringni n marotaba chiqaring
+
+let n: Int = 4
+let s: String = "ab"
+
+let str = String.init(repeating: s, count: n)
+print(str) 
+// abababab
 ```
 
 </details>
