@@ -11,6 +11,8 @@
 * [Search, Sort](search-sort.md)
 * [Closures](closures.md)
 * [Class and struct](class-and-struct/README.md)
+  * [Init](class-and-struct/init.md)
+  * [Property](class-and-struct/property.md)
   * [Methods](class-and-struct/methods.md)
 * [Subscripts](subscripts.md)
 * [Inheritance](inheritance.md)
