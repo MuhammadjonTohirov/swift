@@ -56,3 +56,30 @@ Ko'rib turganingizdek, `class` obyektidan keyin `.` ni qo'yish orqali unga tegis
 
 <figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>Get class properties and methods</p></figcaption></figure>
 
+### init
+
+`init` metodi klass yaratilganda avtomatik ravishda chaqiriladi va klass xususiyatlari uchun boshlang'ich qiymatlarni belgilaydi. `init` metodi yordamida, klass xususiyatlarini belgilash va ularga qiymat berish mumkin.
+
+Quyidagi misol `Person` nomli bir klassda `init` funksiyasi mavjud:
+
+```swift
+// Person klassi
+
+class Person {
+  var name: String
+  var age: Int
+  
+  init(name: String, age: Int) {
+    self.name = name
+    self.age = age
+  }
+}
+```
+
+> Bu kodda, `Person` nomli klassda `name` va `age` xususiyatlari mavjud va ular `init` funksiyasi orqali belgilanadi. `init` funksiyasi, `name` va `age` xususiyatlariga qiymatlar beradi. `self` kaliti, klass xususiyatlariga murojat qilish uchun ishlatiladi.
+
+```
+// Some code
+let person = Person(name: "John", age: 30)
+
+```
