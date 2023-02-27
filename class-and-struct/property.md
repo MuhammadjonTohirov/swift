@@ -1,10 +1,10 @@
 # Property
 
-`property` klasslarda o'zining o'ziga xos tushunchadir. `property`, klass obyektining xususiyatlari va qiymatlari sifatida ishlatiladi. Klassda, `var` va `let` kalitlari orqali `property` yaratish mumkin.
+`property` klasslarda o'zining o'ziga xos tushunchadir. `property`, klass obyektining propertylari va qiymatlari sifatida ishlatiladi. Klassda, `var` va `let` kalitlari orqali `property` yaratish mumkin.
 
 `var` kaliti yaratilgan `property` ni o'zgartirishga imkon beradi. Biroq, `let` kaliti yaratilgan `property` ni o'zgartirish mumkin emas, ya'ni u o'zgartirilmaydi.
 
-Quyidagi misol `Person` klassida `name` va `age` nomli xususiyatlar (property) mavjud:
+Quyidagi misol `Person` klassida `name` va `age` nomli propertylar (property) mavjud:
 
 ```swift
 class Person {
@@ -18,9 +18,9 @@ class Person {
 }
 ```
 
-> Bu kodda, `Person` nomli klassda `name` va `age` xususiyatlari (property) mavjud. `name` xususiyati `var` kaliti bilan aniqlangan va bu xususiyat obyekt yaratilgandan so'ng o'zgartirilishi mumkin. `age` xususiyati `let` kaliti bilan aniqlangan va bu xususiyat obyekt yaratilgandan so'ng o'zgartirilishi mumkin emas.
+> Bu kodda, `Person` nomli klassda `name` va `age` propertylar (property) mavjud. `name` propertysi `var` kaliti bilan aniqlangan va bu property obyekt yaratilgandan so'ng o'zgartirilishi mumkin. `age` propertysi `let` kaliti bilan aniqlangan va bu property obyekt yaratilgandan so'ng o'zgartirilishi mumkin emas.
 
-Quyidagi kodda, `Person` klassidan yangi bir obyekt yaratiladi va `name` va `age` xususiyatlari belgilanadi. So'ngra biz `name` va `age` tashqaridan qiymat berishga harakat qilamiz:
+Quyidagi kodda, `Person` klassidan yangi bir obyekt yaratiladi va `name` va `age` propertylari belgilanadi. So'ngra biz `name` va `age` tashqaridan qiymat berishga harakat qilamiz:
 
 ```swift
 // Person obyektini yaratish
@@ -33,20 +33,20 @@ person.name = "Mike"
 // bilan aniqlangan va o'zgartirish mumkin emas.
 ```
 
-> Bu kodda, `person` obyekti yaratiladi va `name` va `age` xususiyatlari belgilanadi. `name` xususiyatiga qiymat o'zgartiriladi, shunday qilib `person` obyekti `Mike` nomi bilan yangilandi. Lekin `age` xususiyati `let` kaliti bilan aniqlangan va o'zgartirish mumkin emas.
+> Bu kodda, `person` obyekti yaratiladi va `name` va `age` propertylari belgilanadi. `name` propertysiga qiymat o'zgartiriladi, shunday qilib `person` obyekti `Mike` nomi bilan yangilandi. Lekin `age` propertysi `let` kaliti bilan aniqlangan va o'zgartirish mumkin emas.
 >
 > \
-> `let` kaliti bilan aniqlangan xususiyatlarni o'zgartirish mumkin emas, chunki ular o'zgartirilmaydi. `age` o'zgaruvchan emas, chunki bu insonning yoshini aks ettiradi va yosh o'zgartirilmaydi.
+> `let` kaliti bilan aniqlangan propertylari o'zgartirish mumkin emas, chunki ular o'zgartirilmaydi. `age` o'zgaruvchan emas, chunki bu insonning yoshini aks ettiradi va yosh o'zgartirilmaydi.
 
 ### Setters and Getters
 
-`get` va `set` methodlari, Swift dasturlash tili yordamida xususiyatlarga (`property`) yig'indisiga tegishli funksiyalar hisoblanadi.
+`get` va `set` methodlari, Swift dasturlash tili yordamida `propertysiga` tegishli funksiyalar hisoblanadi.
 
-> `get` methodi, xususiyatning o'qish (get) operatsiyasini bajaradi, ya'ni xususiyatning qiymatini qaytaradi. `set` methodi esa xususiyatning yozish (set) operatsiyasini bajaradi, ya'ni xususiyatning qiymatini o'zgartiradi.
+> `get` methodi, propertysining o'qish (get) operatsiyasini bajaradi, ya'ni xisoblangan qiymatini qaytaradi. `set` methodi esa propertyning yozish (set) operatsiyasini bajaradi, ya'ni propertyning qiymatini o'zgartiradi.
 
 Bunday qilingan sabab, bir nechta o'qish va yozish operatsiyalari bajarilgan bo'lishi mumkin va bu operatsiyalar o'zaro aloqali bo'lishi kerak.
 
-Misol uchun quyidagi `Location` klassi `latitude` va `longitude` xususiyatlari va `coordinate` xususiyati bilan birlashtirilgan:
+Misol uchun quyidagi `Location` klassi `latitude` va `longitude` propertylari va `coordinate` propertysi bilan birlashtirilgan:
 
 ```swift
 class Location {
@@ -71,9 +71,9 @@ class Location {
 }
 ```
 
-`coordinate` xususiyati `get` va `set` methodlari bilan birlikda yaratilgan. `get` bloki `latitude` va `longitude` qiymatlaridan bir tuple qaytaradi, va `set` bloki tupleni qabul qiladi va uning birinchi va ikkinchi elementlarini mos ravishda `latitude` va `longitude`ga beradi.
+`coordinate` propertysi `get` va `set` methodlari bilan birlikda yaratilgan. `get` bloki `latitude` va `longitude` qiymatlaridan bir tuple qaytaradi, va `set` bloki tupleni qabul qiladi va uning birinchi va ikkinchi elementlarini mos ravishda `latitude` va `longitude`ga beradi.
 
-Shunday qilib, quyidagi kodda `Location` obyektining `latitude` va `longitude` xususiyatlari orqali `coordinate` xususiyatiga murojaat qilish mumkin:
+Shunday qilib, quyidagi kodda `Location` obyektining `latitude` va `longitude` propertylari orqali `coordinate` propertysiga murojaat qilish mumkin:
 
 ```swift
 let location = Location(latitude: 40.7128, longitude: -74.0060)

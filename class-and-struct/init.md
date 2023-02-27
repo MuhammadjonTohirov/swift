@@ -1,6 +1,6 @@
 # Init
 
-`init` metodi klass yaratilganda avtomatik ravishda chaqiriladi va klass xususiyatlari uchun boshlang'ich qiymatlarni belgilaydi. `init` metodi yordamida, klass xususiyatlarini belgilash va ularga qiymat berish mumkin.
+`init` metodi klass yaratilganda avtomatik ravishda chaqiriladi va klass propertylari uchun boshlang'ich qiymatlarni belgilaydi. `init` metodi yordamida, klass propertylarini belgilash va ularga qiymat berish mumkin.
 
 Quyidagi misol `Person` nomli bir klassda `init` funksiyasi mavjud:
 
@@ -18,7 +18,7 @@ class Person {
 }
 ```
 
-> Bu kodda, `Person` nomli klassda `name` va `age` xususiyatlari mavjud va ular `init` funksiyasi orqali belgilanadi. `init` funksiyasi, `name` va `age` xususiyatlariga qiymatlar beradi. `self` kaliti, klass xususiyatlariga murojat qilish uchun ishlatiladi.
+> Bu kodda, `Person` nomli klassda `name` va `age` xususiyatlari mavjud va ular `init` funksiyasi orqali belgilanadi. `init` funksiyasi, `name` va `age` xususiyatlariga qiymatlar beradi. `self` kaliti, klass propertylariga murojat qilish uchun ishlatiladi.
 
 Quyidagi kodda, `Person` klassidan bir obyekt yaratiladi va `init` funksiyasi chaqiriladi:
 
