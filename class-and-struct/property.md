@@ -55,6 +55,7 @@ class Location {
     
     var coordinate: (Double, Double) {
         get {
+            print("Get coordinate")
             return (latitude, longitude)
         }
         set(newCoordinate) {
