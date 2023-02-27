@@ -1,6 +1,7 @@
 # Table of contents
 
 * [🍏 Introduction and basics](README.md)
+  * [Page 1](introduction-and-basics/page-1.md)
   * [Basic operators](introduction-and-basics/basic-operators.md)
   * [🍹 Optionals, Strings and Characters](introduction-and-basics/optionals-strings-and-characters.md)
   * [Extended Int, Float, Double](introduction-and-basics/extended-int-float-double.md)
@@ -11,7 +12,7 @@
 * [Search, Sort](search-sort.md)
 * [Closures](closures.md)
 * [Class and struct](class-and-struct/README.md)
-  * [Init](class-and-struct/init.md)
+  * [Init and Deinit](class-and-struct/init-and-deinit.md)
   * [Property](class-and-struct/property.md)
   * [Methods](class-and-struct/methods.md)
 * [Subscripts](subscripts.md)
