@@ -4,7 +4,7 @@
 
 A class is a blueprint for creating objects in programming. It defines the properties and methods that an object will have, and objects created from a class are stored in the computer's memory and can be shared between different parts of a program.
 
-`Class` - bu dasturlashda ob'ektlarni yaratish rejasi. Class property va methodlardan iborat nomga ega bo'lgan kod bloki. Va `class` car yaratilinayotgan dasturning turli qisimlarida ishatishga mo'ljallangan.
+`Class` - bu dasturlashda ob'ektlarni yaratish rejasi. Class property va methodlardan iborat nomga ega bo'lgan kod bloki va `class` dasturning turli qisimlarida ishatishga mo'ljallangan.
 
 {% hint style="info" %}
 `property` - class yoki struct ga tegishli bo'lgan o'zgaruvchi yoki o'zgarmas kattalik
@@ -81,7 +81,7 @@ Xo'sh unda ularni farqi qayerlada ko'rinadi desangiz
 > `Deinitializers`: `class` ichida `deinit` methodini o'zgartirsa bo'ladi, lekin structda buni iloji yo'q
 
 {% hint style="info" %}
-`value type` - ya'ni agar bir struct object boshqa bir struct objectga tenglashtirilsa uning qiymatlari `copy` bo'ladi ya'ni nusxalanadi. Bu degani ikkinchi struct object ichidagi birorta property o'zgartirilsa ham birnichi objectda hech nima bo'lmaydi
+`value type` - sodda qilib aytganda agar bir struct object boshqa bir struct objectga tenglashtirilsa uning qiymatlari `copy` bo'ladi ya'ni nusxalanadi. Bu degani ikkinchi struct object ichidagi birorta property o'zgartirilsa ham birnichi objectda hech nima bo'lmaydi
 
 `reference type` - bunda class object boshqa bir class objectga tenglashtirilsa brinchi class object ikkinchiga `copy` qilinmaydi aksincha uni o'zi ikkinchi objectga aylanib qoladi. yoki buni bir object bir vaqtni o'zida ikkita joyda turipdi deb tushunsa bo'ladi
 {% endhint %}
