@@ -8,7 +8,7 @@
 * [🔄 Collection Types](collection-types.md)
 * [Conditions](conditions.md)
 * [Control Flow](control-flow.md)
-* [♻ Functions](functions.md)
+* [♻️ Functions](functions.md)
 * [Search, Sort](search-sort.md)
 * [Closures](closures.md)
 * [Class and struct](class-and-struct/README.md)
