@@ -23,6 +23,7 @@
 * [Multithreading](multithreading/README.md)
   * [GCD](multithreading/gcd.md)
   * [Concurrency](multithreading/concurrency.md)
+  * [QoS](multithreading/qos.md)
 * [Type Casting](type-casting.md)
 * [Nested types](nested-types.md)
 * [Extensions](extensions.md)
