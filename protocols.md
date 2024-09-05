@@ -76,3 +76,105 @@ class FlyingCar: Drivable, Flyable {
 
 > **Eslatma:** Protokollar ham tur (type) hisoblanganligi sababli, ularning nomlarini boshqa Swift turlari nomlariga (masalan, Int, String va Double) mos kelishi uchun bosh harf bilan boshlang (masalan, FullyNamed va RandomNumberGenerator).
 
+### Protokol Kengaytmalari (Protocol Extensions)
+
+Protokol kengaytmalari yordamida protokolda ta’riflangan funksionallikni kengaytirish va uning mos keluvchi turlari tomonidan avtomatik ravishda foydalanilishi mumkin bo‘lgan standart amalga oshirishlarni taqdim etish mumkin. Kengaytma (`extension`) kalit so’zi yordamida protokolga qo’shimcha funksionallik qo’shiladi.
+
+```swift
+// Protocollarda kengaytma sintaksisi
+protocol SomeProtocol {
+    func requiredMethod()
+}
+
+extension SomeProtocol {
+    func optionalMethod() {
+        print("Optional method implementation")
+    }
+}
+```
+
+Bu yerda SomeProtocol protokoli requiredMethod() metodini talab qiladi, lekin kengaytma orqali qo‘shimcha optionalMethod() metodini taqdim etadi. Barcha protokolga mos keluvchi turlar ushbu kengaytma orqali taqdim etilgan metoddan foydalanishlari mumkin.
+
+#### Protokol Kengaytmalarining Afzalliklari
+
+> 1\. Standart Amalga Oshirishlar (`Default Implementations`): Protokol kengaytmalari yordamida metodlar uchun standart amalga oshirishlarni taqdim etishingiz mumkin, shunda mos keluvchi turlar ushbu metodlarni o‘z ichida qayta amalga oshirishni talab qilmaydi.
+>
+> 2\. Kodni Qayta Foydalanish: Agar bir nechta tur uchun bir xil metod yoki funksionallikni taqdim etishingiz kerak bo‘lsa, protokol kengaytmasidan foydalanib kodni qayta yozmaslik mumkin.
+>
+> 3\. Moslashuvchan Kod: Kengaytmalar protokollarning dastur kodiga qo‘shimcha funksionallik qo‘shishni yanada osonlashtiradi va kodning modularligini oshiradi.
+
+Quida bir qancha missolar bilan tushuntirishga harakat qildik
+
+```swift
+// 1 - misol
+
+protocol Greetable {
+    func greet()
+}
+
+extension Greetable {
+    func greet() {
+        print("Hello!")
+    }
+}
+
+struct Person: Greetable {}
+
+let person = Person()
+person.greet()  // "Hello!"
+```
+
+Bu misolda `Greetable` protokoli `greet()` metodini talab qiladi. Kengaytma orqali ushbu metodning standart amalga oshirilishi berilgan. `Person` strukturasi ushbu protokolga mos keladi va standart amalga oshirilishdan foydalanadi.
+
+```swift
+// 2 - misol
+
+protocol Shape {
+    var area: Double { get }
+}
+
+extension Shape {
+    func printArea() {
+        print("Area is \(area)")
+    }
+}
+
+struct Circle: Shape {
+    var radius: Double
+    var area: Double {
+        return Double.pi * radius * radius
+    }
+}
+
+let circle = Circle(radius: 5)
+circle.printArea()  // "Area is 78.53981633974483"
+```
+
+Yuqoridagi misolda `Shape` protokoli faqat `area` xususiyatini talab qiladi. Kengaytma esa qo‘shimcha `printArea()` metodini qo‘shadi, bu metod mos keluvchi tur tomonidan avtomatik foydalanilishi mumkin.
+
+```swift
+// 3 - misol
+
+protocol Describable {
+    var description: String { get }
+}
+
+extension Describable {
+    var uppercaseDescription: String {
+        return description.uppercased()
+    }
+}
+
+struct Book: Describable {
+    var description: String
+}
+
+let book = Book(description: "Swift Programming")
+print(book.uppercaseDescription)  // "SWIFT PROGRAMMING"
+```
+
+Yuqoridagi misolda `Describable` protokoli faqat description xususiyatini talab qiladi, lekin kengaytma yordamida hisoblovchi `uppercaseDescription` xususiyati qo‘shiladi.
+
+{% hint style="info" %}
+Hulosa o'rnida shuni aytish mumkinki `Swift`’da protokollar ko‘p tomonlama va kuchli vosita bo‘lib, ular yordamida siz kodni moslashuvchan, modulli, va qayta foydalanish mumkin bo‘lgan qilib tashkil etishingiz mumkin. Protokollar va ularning kengaytmalari yordamida siz murakkab loyihalarda oddiy va toza kod yozishingiz, hamda talablar va amalga oshirishlarni ajratib qo‘yishingiz mumkin. Protokollardan to‘g‘ri va samarali foydalanish dasturingizning sifatini oshiradi va uni boshqarishni osonlashtiradi.
+{% endhint %}
