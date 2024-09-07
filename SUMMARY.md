@@ -29,7 +29,7 @@
 * [Extensions](extensions.md)
 * [Protocols](protocols.md)
 * [Generics](generics.md)
-* [Opaque types](opaque-types.md)
+* [Opaque type](opaque-type.md)
 * [ARC](arc.md)
 * [Memory Safety](memory-safety.md)
 * [Access control](access-control.md)
