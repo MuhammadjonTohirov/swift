@@ -1,7 +1,6 @@
 # Table of contents
 
 * [🍏 Introduction and basics](README.md)
-  * [Page 1](introduction-and-basics/page-1.md)
   * [Basic operators](introduction-and-basics/basic-operators.md)
   * [🍹 Optionals, Strings and Characters](introduction-and-basics/optionals-strings-and-characters.md)
   * [Extended Int, Float, Double](introduction-and-basics/extended-int-float-double.md)
