@@ -23,6 +23,7 @@
   * [GCD](multithreading/gcd.md)
   * [Concurrency](multithreading/concurrency.md)
   * [QoS](multithreading/qos.md)
+  * [DispatchWorkItemFlags](multithreading/dispatchworkitemflags.md)
 * [Type Casting](type-casting.md)
 * [Nested types](nested-types.md)
 * [Extensions](extensions.md)

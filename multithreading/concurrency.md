@@ -19,13 +19,16 @@ import Foundation
 
 // Oshxona uchun seriyali navbat yaratish
 let kitchenQueue = DispatchQueue(label: "com.example.kitchenQueue", attributes: .concurrent)
+let group = DispatchGroup()
 
 // Oshpazning vazifasini ta'riflash funksiyasi
 func cookDish(dishName: String, duration: Int) {
+    group.enter()
     kitchenQueue.async {
         print("Oshpaz \(dishName) ni pishirishni boshladi")
         sleep(UInt32(duration))
         print("Oshpaz \(dishName) ni tugatdi")
+        group.leave()
     }
 }
 
@@ -38,10 +41,9 @@ for dish in dishes {
 }
 
 // Asosiy oqimni kutish
-DispatchQueue.main.async {
+group.notify(queue: .main) {
     print("Barcha vazifalar bajarildi")
 }
-
 ```
 
 ```
@@ -56,3 +58,6 @@ Oshpaz Shashlik ni tugatdi
 Barcha vazifalar bajarildi
 ```
 
+### Izoh
+
+Yuqoridagi Swift kod namunasida Grand Central Dispatch (GCD) yordamida concurrency amalga oshirilgan. Bu kod bir necha oshpazning bir vaqtning o'zida turli taomlarni tayyorlashini simulyatsiya qiladi. Kodda `kitchenQueue` deb nomlangan parallel navbat va `DispatchGroup` ishlatiladi. `cookDish` funksiyasi orqali har bir oshpazning vazifasi ta'riflanadi, u boshlanishi, ma'lum vaqt kutishi va tugallanishidan iborat. Dastur turli vaqtlarda pishiriladigan taomlar ro'yxatini oladi va har bir vazifa baxillanganida `group.notify` yordamida barcha vazifalar bitishi natijasi konsolda chiqariladi. Bu yondashuv bir vaqtda bajariladigan vazifalarni samarali ravishda boshqarish va sinxronlashtirishni ta'minlaydi.
