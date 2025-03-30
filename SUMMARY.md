@@ -33,6 +33,10 @@
 * [Opaque type](opaque-types.md)
 * [ARC](arc.md)
 * [Memory Safety](memory-safety.md)
-* [Access control](access-control/README.md)
+* [Access control](access-control.md)
   * [Open vs Public](access-control/open-vs-public.md)
 * [Advanced operators](advanced-operators.md)
+
+## Q\&A
+
+* [Data](q-and-a/data.md)
