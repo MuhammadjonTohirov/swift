@@ -11,7 +11,7 @@ Phantom types are a type system technique where a type parameter is used solely 
 A phantom type parameter appears in the type declaration but not in any of the fields of the data structure:
 
 ```swift
-swiftCopystruct Identifier<T> {
+struct Identifier<T> {
     let value: String
     
     init(_ value: String) {
