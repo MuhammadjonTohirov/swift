@@ -250,3 +250,155 @@ One-sided ranges are useful for:
 * Pattern matching in switch statements
 
 </details>
+
+<details>
+
+<summary>What does it mean when we say “strings are collections in Swift”?</summary>
+
+In Swift, strings are collections of characters, which means:
+
+* You can iterate over a string character by character using `for...in` loops
+* String conforms to `Collection` protocol, providing functionality like `map`, `filter`, etc.
+* Characters are accessed via string indices, not integers (`string[index]` not `string[0]`)
+* String indices are complex types that account for variable-width Unicode characters
+* You can use collection methods like `count`, `isEmpty`, `first`, and `last`
+
+Example:
+
+```swift
+let greeting = "Hello"
+for character in greeting {
+    print(character)
+}
+// Outputs: H, e, l, l, o
+
+let firstChar = greeting[greeting.startIndex] // "H"
+let thirdChar = greeting[greeting.index(greeting.startIndex, offsetBy: 2)] // "l"
+```
+
+</details>
+
+<details>
+
+<summary>What is a <code>UUID</code>, and when might you use it?</summary>
+
+A `UUID` (Universally Unique Identifier) is a 128-bit value used to uniquely identify information. In Swift, it's represented by the `UUID` struct.
+
+Use cases:
+
+* Generating unique identifiers for database records
+* Creating unique keys for caching
+* Tracking unique user sessions
+* Uniquely identifying devices or instances
+* Implementing offline-first syncing strategies
+
+Example:
+
+```swift
+let id = UUID() // Creates a random UUID
+let stringRepresentation = id.uuidString // e.g., "E621E1F8-C36C-495A-93FC-0C247A3E6E5F"
+```
+
+</details>
+
+<details>
+
+<summary>What's the difference between a value type and a reference type?</summary>
+
+**Value Types** (structs, enums, tuples):
+
+* Copied when assigned to variables or passed to functions
+* Each copy is independent; modifications don't affect other copies
+* Memory typically managed on the stack when possible
+* Automatically deallocated when out of scope
+
+**Reference Types** (classes, functions):
+
+* Passed by reference; variables hold a reference to the same instance
+* Multiple variables can reference the same instance
+* Changes to one reference affect all others pointing to the same instance
+* Memory managed on the heap
+* Reference counting tracks when to deallocate memory
+
+Example:
+
+```swift
+// Value type
+struct Point { var x, y: Int }
+var point1 = Point(x: 1, y: 1)
+var point2 = point1
+point2.x = 2
+print(point1.x) // 1 (unchanged)
+
+// Reference type
+class Rectangle { var width, height: Int }
+let rect1 = Rectangle(width: 1, height: 1)
+let rect2 = rect1
+rect2.width = 2
+print(rect1.width) // 2 (changed)
+```
+
+</details>
+
+<details>
+
+<summary>When would you use Swift’s <code>Result</code> type?</summary>
+
+`Result<Success, Failure>` is an enum with two cases: `.success(Success)` and `.failure(Failure)`. It's used to:
+
+* Represent the outcome of operations that can either succeed or fail
+* Encapsulate success values or error information in a type-safe way
+* Enable cleaner error handling compared to throwing functions
+* Support asynchronous error handling in completion handlers
+
+Example:
+
+```swift
+func fetchUser(id: String, completion: @escaping (Result<User, NetworkError>) -> Void) {
+    // Network request
+    if successful {
+        completion(.success(user))
+    } else {
+        completion(.failure(.notFound))
+    }
+}
+
+fetchUser(id: "123") { result in
+    switch result {
+    case .success(let user):
+        print("Found user: \(user.name)")
+    case .failure(let error):
+        print("Error: \(error)")
+    }
+}
+```
+
+</details>
+
+<details>
+
+<summary>What is type erasure and when would you use it?</summary>
+
+Type erasure is a technique for hiding concrete types behind protocol interfaces while preserving type safety. You use it when:
+
+* You need to store different implementations of a protocol with associated types
+* You want to hide implementation details while maintaining protocol conformance
+* You need to work around Swift's limitations with protocols that have Self or associated type requirements
+
+Common examples include `AnyCollection`, `AnyHashable`, and `AnyPublisher` in Combine.
+
+Example:
+
+```swift
+// Without type erasure
+// Error: Protocol 'Sequence' can only be used as a generic constraint
+// let sequences: [Sequence] = [...]
+
+// With type erasure
+let sequences: [AnySequence<Int>] = [
+    AnySequence([1, 2, 3]),
+    AnySequence(Set([4, 5, 6]))
+]
+```
+
+</details>

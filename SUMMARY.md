@@ -40,3 +40,16 @@
 ## Q\&A
 
 * [Data](q-and-a/data.md)
+* [Design patterns](q-and-a/design-patterns/README.md)
+  * [Delegate](q-and-a/design-patterns/delegate.md)
+  * [MVC](q-and-a/design-patterns/mvc.md)
+  * [MVVM](q-and-a/design-patterns/mvvm.md)
+  * [Dependency Injection](q-and-a/design-patterns/dependency-injection.md)
+  * [Protocol-Oriented Programming](q-and-a/design-patterns/protocol-oriented-programming.md)
+  * [Functional Programming](q-and-a/design-patterns/functional-programming.md)
+  * [KVO](q-and-a/design-patterns/kvo.md)
+  * [Singleton](q-and-a/design-patterns/singleton.md)
+  * [Phantom types](q-and-a/design-patterns/phantom-types.md)
+* [Frameworks](q-and-a/frameworks.md)
+* [iOS](q-and-a/ios/README.md)
+  * [Layout](q-and-a/ios/layout.md)
